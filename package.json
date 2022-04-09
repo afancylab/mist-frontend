@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:afancylab/mist-frontend.git",
   "author": "imithu <imithu@imithu.org>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
 }
