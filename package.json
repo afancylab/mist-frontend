@@ -2,6 +2,7 @@
   "name": "@afancylab/mist",
   "version": "1.0.0",
   "main": "lib/index.js",
+	"type": "module",
   "repository": "git@github.com:afancylab/mist-frontend.git",
   "author": "imithu <imithu@imithu.org>",
   "license": "MIT",
