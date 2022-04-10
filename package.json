@@ -1,6 +1,6 @@
 {
   "name": "@afancylab/mist",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/index.js",
 	"type": "module",
   "repository": "git@github.com:afancylab/mist-frontend.git",
