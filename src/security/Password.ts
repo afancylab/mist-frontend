@@ -70,9 +70,13 @@ class Password
 	 * - 51 to 75				: reasonable password
 	 * - 76 to 100			: good password
 	 * - more than 100	: excellent password
+	 * note:
+	 * minimum return value is 0
+	 * - if value is Infinity then return 1000
+	 * - if value is NaN or -Infinity then return 0
 	 * 
 	 * @since   🌱 1.0.0
-	 * @version 🌴 1.0.0
+	 * @version 🌴 1.1.0
 	 * @author  ✍ Muhammad Mahmudul Hasan Mithu
 	 */
 	static entropy(password: string): number
@@ -90,7 +94,10 @@ class Password
 		let password_length = password.length;
 		if(password_length>128)  password_length = 128;
 
-		return Math.round(Math.log2(char_size**password_length));
+		let entropy = Math.round(Math.log2(char_size**password_length));
+		if(entropy===Infinity) return 1000;
+		else if(entropy>0) return entropy;
+		else return 0;
 	}
 
 }
